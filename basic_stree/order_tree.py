@@ -98,6 +98,20 @@ def post_order_two_stack(rootNode):
         stack2.append(node)
     while stack2:
         print(stack2.pop().data)
+        
+#层次遍历
+def level_order(rootNode):
+    queue = []
+    node = rootNode
+    queue.append(node)
+
+    while queue:
+        node = queue.pop(0)
+        print(node.data)
+        if node.left:
+            queue.append(node.left)
+        if node.right:
+            queue.append(node.right)
 
 if __name__ == '__main__':
 
